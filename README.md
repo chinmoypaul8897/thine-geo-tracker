@@ -125,7 +125,11 @@ source venv/bin/activate        # Windows: venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-Add your key to a `.env` file in the project root:
+Copy the example env file and add your key:
+
+```bash
+cp .env.example .env            # Windows: copy .env.example .env
+```
 
 ```env
 GEMINI_API_KEY=your_google_ai_studio_key_here
@@ -180,16 +184,22 @@ Known trade-offs, stated plainly — most of these are the natural next build:
 
 ---
 
-## Roadmap
+## What I'd build next
 
-- [ ] Multi-engine polling — ChatGPT, Claude, Perplexity alongside Gemini
-- [ ] Entity-aware detection to replace substring matching
-- [ ] Historical persistence and a visibility trend chart
-- [ ] Competitor benchmarking — relative rather than absolute Share of Voice
-- [ ] Repeated sampling per prompt for confidence intervals
-- [ ] Scheduled runs with change alerts
+Where I'd take this if the baseline proved worth acting on:
+
+- **Multi-engine polling** — ChatGPT, Claude, and Perplexity alongside Gemini, since each model recalls a different slice of the web
+- **Entity-aware detection** — replace substring matching with something that distinguishes a recommendation from a passing mention
+- **Historical persistence** — a datastore behind the runs, turning snapshots into a visibility trend line
+- **Competitor benchmarking** — relative Share of Voice against named rivals rather than an absolute number
+- **Repeated sampling** — several runs per prompt to produce confidence intervals instead of a single sample
+- **Async batching** — concurrent calls so a large prompt panel stays practical
 
 ---
+
+## License
+
+[MIT](LICENSE) © Chinmoy Paul
 
 <div align="center">
 <sub>Built by <a href="https://github.com/chinmoypaul8897">Chinmoy Paul</a></sub>
